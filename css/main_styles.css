@@ -1,7 +1,26 @@
-body {
+/* .(dot) is used for classes and # is used for IDs */
+
+html, body {
     background-color: white;
+}
+
+#full_container {
+    border-style: solid;
+    border-radius: 15px;
+    margin: auto;
+    height: 450px;
 }
 
 h1 {
     color: black;
+}
+
+.ad_container {
+    width: 25%;
+    height: 100%;
+}
+
+#content_container {
+    width: 10%;
+    height: 100%;
 }

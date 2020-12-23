@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/main_styles.css">
+    <title>Wedding Cost Calculator</title>
+</head>
+<script>
+function weddingCalculator() {
+    var venue = document.getElementById("venue").value
+    var last_name = document.getElementById("lname").value
+    alert("Welcome " + last_name + "'s! Glad to hear your wedding is at " + venue);
+
+    var welcome_banner = document.getElementByID("welcome_banner");
+    welcome_banner.innerHTML = "Hello " + last_name + "'s";
+}
+</script>
+<body>
+   <div id="full_container" style = "width:95%" align="center">
+
+         <div id="header_container" style = "background-color:#b5dcb3; width:100%">
+            <h1>Cost2Kiss.com Prototype</h1>
+         </div>
+
+         <div id="ad1_container" class="ad_container" style = "background-color:#aaa; float:left;">
+            <div><b>Advertisements</b></div>
+            Ad #1<br />
+            Ad #2<br />
+            Ad #3
+         </div>
+
+         <div id="content_container" style = "background-color:#eee; float:left;" >
+            <p>Calculator</p>
+             <form onsubmit="weddingCalculator()">
+                <label for="venue">Wedding Venue:</label><br>
+                <input type="text" id="venue" name="venue"><br>
+                 <br></br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname">
+                 <br></br>
+                 <div class="slidecontainer">
+                    <input type="range" min="1" max="100000" value="1000" class="slider" id="myRange">
+                 </div>
+                <input type="submit">
+             </form>
+         </div>
+
+         <div id="ad2_container" class="ad_container" style = "background-color:#aaa; float:right;">
+            <div><b>Advertisements</b></div>
+            Ad #1<br />
+            Ad #2<br />
+            Ad #3
+         </div>
+
+         <div style = "background-color:#b5dcb3; clear:both">
+            <center>
+               Copyright © 2020 WeddingCalculator.com
+            </center>
+         </div>
+
+   </div>
+</body>
+</html>
