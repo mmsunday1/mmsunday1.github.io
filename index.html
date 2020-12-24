@@ -10,6 +10,29 @@
 <style>
 .w3-sidebar a {font-family: "Roboto", sans-serif}
 body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+#main_content_container {
+  background-color: white;
+}
+
+#survey_grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 10px;
+}
+
+.grid_item {
+    background-color: white;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+#introduction_container, introduction_content_container {
+    background-color: white;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif
+}
 </style>
 <body class="w3-content" style="max-width:1200px">
 
@@ -23,6 +46,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <a href="#" class="w3-bar-item w3-button">Dresses</a>
     <a href="#" class="w3-bar-item w3-button">Makeup</a>
     <a href="#" class="w3-bar-item w3-button">Hair</a>
+
+    <a href="#" class="w3-bar-item w3-button">Save the Dates</a>
+    <a href="#" class="w3-bar-item w3-button">Invites</a>
+    <a href="#" class="w3-bar-item w3-button">Cake</a>
+    <a href="#" class="w3-bar-item w3-button">Misc.</a>
     <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
       Venue <i class="fa fa-caret-down"></i>
     </a>
@@ -33,10 +61,6 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <a href="#" class="w3-bar-item w3-button">Bar</a>
       <a href="#" class="w3-bar-item w3-button">Guest Accomodations</a>
     </div>
-    <a href="#" class="w3-bar-item w3-button">Save the Dates</a>
-    <a href="#" class="w3-bar-item w3-button">Invites</a>
-    <a href="#" class="w3-bar-item w3-button">Cake</a>
-    <a href="#" class="w3-bar-item w3-button">Misc.</a>
   </div>
   <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
 </nav>
@@ -58,7 +82,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   <!-- Top header -->
   <header class="w3-container w3-xlarge">
-    <p class="w3-left">Cost2Kiss</p>
+    <p class="w3-left"></p> <!-- this was Cost2Kiss -->
     <p class="w3-right">
       <i class="fa fa-shopping-cart w3-margin-right"></i>
       <i class="fa fa-search"></i>
@@ -67,31 +91,100 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 
   <!-- Image header -->
   <div class="w3-display-container w3-container">
-    <img src="./img/stock_creator.jpg" alt="Jeans" style="width:100%">
+    <img src="./img/wedding-stock-photography-1.png" alt="Jeans" style="width:100%">
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
-      <h1 class="w3-jumbo w3-hide-small">Tester</h1>
+      <!-- <h1 class="w3-jumbo w3-hide-small">Tester</h1>
       <h1 class="w3-hide-large w3-hide-medium">Tester</h1>
-      <h1 class="w3-hide-small">COPYRIGHT 2020</h1>
-      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">PRICE YOUR KISS</a></p>
+      <h1 class="w3-hide-small">COPYRIGHT 2020</h1> -->
+      <p><a href="#survey_grid_container" class="w3-button w3-black w3-padding-large w3-large">PRICE YOUR KISS</a></p>
     </div>
   </div>
 
-  <!-- Main Content -->
-  <div class="w3-row w3-grayscale", align="center">
-    <form onsubmit="weddingCalculator()">
-      <br></br>
-      <br></br>
-      <label for="venue">Wedding Venue:</label><br>
-      <input type="text" id="venue" name="venue"><br>
-      <br></br>
-      <label for="lname">Last Name:</label><br>
-      <input type="text" id="lname" name="lname">
-      <br></br>
-      <div class="slidecontainer">
-        <input type="range" min="1" max="100000" value="1000" class="slider" id="myRange">
+  <!-- Main Content and -->
+  <div id="main_content_container", class="w3-row w3-grayscale", align="left">
+      <div id="introduction_container", align="center">
+          <h1>Welcome to Cost2Kiss!</h1>
       </div>
+      <div id="introduction_content_container", align="left">
+          <h3>As recent newlyweds reflecting on our weeding experience, the one thing.....</h3>
+      </div>
+      <form onsubmit="weddingCalculator()">
+          <div id="survey_grid_container" class="survey_grid_container">
+              <div class="grid_item">
+                  <p></p>
+                  <h3>Dress Tier: <br /> (bride only)</h3>
+                  <input type="radio" id="dressa" name="dress" value="dressa">
+                  <label for="dressa">Tier 1: $15,000 +</label><br>
+                  <input type="radio" id="dressb" name="dress" value="dressb">
+                  <label for="dressb">Tier 2: $10,000 - $15,000</label><br>
+                  <input type="radio" id="dressc" name="dress" value="dressc">
+                  <label for="dressc">Tier 3: $5,000 - $10,000</label><br>
+                  <input type="radio" id="dressd" name="dress" value="dressd">
+                  <label for="dressd">Tier 4: $1,000 - $5,000</label><br>
+                  <input type="radio" id="dresse" name="dress" value="dresse">
+                  <label for="dresse">Tier 5: < $1,000</label><br>
+              </div>
+              <div class="grid_item">
+                  <p></p>
+                  <h3>Makeup Tier: <br /> (bride only)</h3>
+                  <input type="radio" id="makeupa" name="makeup" value="makeupa">
+                  <label for="makeupa">Tier 1: $1,000 +</label><br>
+                  <input type="radio" id="makeupb" name="makeup" value="makeupb">
+                  <label for="makeupb">Tier 2: $750 - $1,000</label><br>
+                  <input type="radio" id="makeupc" name="makeup" value="makeupc">
+                  <label for="makeupc">Tier 3: $500 - $750</label><br>
+                  <input type="radio" id="makeupd" name="makeup" value="makeupd">
+                  <label for="makeupd">Tier 4: $250 - $500</label><br>
+                  <input type="radio" id="makeupe" name="makeup" value="makeupe">
+                  <label for="makeupe">Tier 5: < $250</label><br>
+              </div>
+              <div class="grid_item">
+                  <p></p>
+                  <h3>Hair Tier: <br /> (bride only)</h3>
+                  <input type="radio" id="haira" name="hair" value="haira">
+                  <label for="haira">Tier 1: $1,000 +</label><br>
+                  <input type="radio" id="hairb" name="hair" value="hairb">
+                  <label for="hairb">Tier 2: $750 - $1,000</label><br>
+                  <input type="radio" id="hairc" name="hair" value="hairc">
+                  <label for="hairc">Tier 3: $500 - $750</label><br>
+                  <input type="radio" id="haird" name="hair" value="haird">
+                  <label for="haird">Tier 4: $250 - $500</label><br>
+                  <input type="radio" id="haire" name="hair" value="haire">
+                  <label for="haire">Tier 5: < $250</label><br>
+              </div>
+              <div class="grid_item">
+                  <p></p>
+                  <h3>Save The Date Tier<br /> (per guest):</h3>
+                  <input type="radio" id="stda" name="std" value="stda">
+                  <label for="stda">Tier 1: $10 +</label><br>
+                  <input type="radio" id="stdb" name="std" value="stdb">
+                  <label for="stdb">Tier 2: $7.50 - $10</label><br>
+                  <input type="radio" id="stdc" name="std" value="stdc">
+                  <label for="stdc">Tier 3: $5.00 - $7.50</label><br>
+                  <input type="radio" id="stdd" name="std" value="stdd">
+                  <label for="stdd">Tier 4: $2.50 - $5.00</label><br>
+                  <input type="radio" id="stde" name="std" value="stde">
+                  <label for="stde">Tier 5: < $2.50</label><br>
+              </div>
+              <div class="grid_item">
+                  <p></p>
+                  <h3>Cake Tier:</h3>
+                  <input type="radio" id="cakea" name="cake" value="cakea">
+                  <label for="cakea">Tier 1: $1,000 +</label><br>
+                  <input type="radio" id="cakeb" name="cake" value="cakeb">
+                  <label for="cakeb">Tier 2: $750 - $1,000</label><br>
+                  <input type="radio" id="cakec" name="cake" value="cakec">
+                  <label for="cakec">Tier 3: $500 - $750</label><br>
+                  <input type="radio" id="caked" name="cake" value="caked">
+                  <label for="caked">Tier 4: $250 - $500</label><br>
+                  <input type="radio" id="cakee" name="cake" value="cakee">
+                  <label for="cakee">Tier 5: < $250</label><br>
+              </div>
+          </div>
       <input type="submit">
-    </form>
+      <br></br>
+      <p></p>
+      </form>
   </div>
 
   <!-- Footer -->
