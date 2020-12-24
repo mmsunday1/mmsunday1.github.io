@@ -3,7 +3,8 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link rel="stylesheet" type="text/css" href="./css/main_styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -96,7 +97,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <!-- <h1 class="w3-jumbo w3-hide-small">Tester</h1>
       <h1 class="w3-hide-large w3-hide-medium">Tester</h1>
       <h1 class="w3-hide-small">COPYRIGHT 2020</h1> -->
-      <p><a href="#survey_grid_container" class="w3-button w3-black w3-padding-large w3-large">PRICE YOUR KISS</a></p>
+      <p><a href="#introduction_content_container" class="w3-button w3-black w3-padding-large w3-large">PRICE YOUR KISS</a></p>
     </div>
   </div>
 
@@ -108,83 +109,86 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
       <div id="introduction_content_container", align="left">
           <h3>As recent newlyweds reflecting on our weeding experience, the one thing.....</h3>
       </div>
-      <form onsubmit="weddingCalculator()">
+      <form id="wedding_form">
           <div id="survey_grid_container" class="survey_grid_container">
               <div class="grid_item">
                   <p></p>
                   <h3>Dress Tier: <br /> (bride only)</h3>
-                  <input type="radio" id="dressa" name="dress" value="dressa">
+                  <input type="radio" id="dressa" name="dress" value="A">
                   <label for="dressa">Tier 1: $15,000 +</label><br>
-                  <input type="radio" id="dressb" name="dress" value="dressb">
+                  <input type="radio" id="dressb" name="dress" value="B">
                   <label for="dressb">Tier 2: $10,000 - $15,000</label><br>
-                  <input type="radio" id="dressc" name="dress" value="dressc">
+                  <input type="radio" id="dressc" name="dress" value="C">
                   <label for="dressc">Tier 3: $5,000 - $10,000</label><br>
-                  <input type="radio" id="dressd" name="dress" value="dressd">
+                  <input type="radio" id="dressd" name="dress" value="D">
                   <label for="dressd">Tier 4: $1,000 - $5,000</label><br>
-                  <input type="radio" id="dresse" name="dress" value="dresse">
+                  <input type="radio" id="dresse" name="dress" value="E">
                   <label for="dresse">Tier 5: < $1,000</label><br>
               </div>
               <div class="grid_item">
                   <p></p>
                   <h3>Makeup Tier: <br /> (bride only)</h3>
-                  <input type="radio" id="makeupa" name="makeup" value="makeupa">
+                  <input type="radio" id="makeupa" name="makeup" value="A">
                   <label for="makeupa">Tier 1: $1,000 +</label><br>
-                  <input type="radio" id="makeupb" name="makeup" value="makeupb">
+                  <input type="radio" id="makeupb" name="makeup" value="B">
                   <label for="makeupb">Tier 2: $750 - $1,000</label><br>
-                  <input type="radio" id="makeupc" name="makeup" value="makeupc">
+                  <input type="radio" id="makeupc" name="makeup" value="C">
                   <label for="makeupc">Tier 3: $500 - $750</label><br>
-                  <input type="radio" id="makeupd" name="makeup" value="makeupd">
+                  <input type="radio" id="makeupd" name="makeup" value="D">
                   <label for="makeupd">Tier 4: $250 - $500</label><br>
-                  <input type="radio" id="makeupe" name="makeup" value="makeupe">
+                  <input type="radio" id="makeupe" name="makeup" value="E">
                   <label for="makeupe">Tier 5: < $250</label><br>
               </div>
               <div class="grid_item">
                   <p></p>
                   <h3>Hair Tier: <br /> (bride only)</h3>
-                  <input type="radio" id="haira" name="hair" value="haira">
+                  <input type="radio" id="haira" name="hair" value="A">
                   <label for="haira">Tier 1: $1,000 +</label><br>
-                  <input type="radio" id="hairb" name="hair" value="hairb">
+                  <input type="radio" id="hairb" name="hair" value="B">
                   <label for="hairb">Tier 2: $750 - $1,000</label><br>
-                  <input type="radio" id="hairc" name="hair" value="hairc">
+                  <input type="radio" id="hairc" name="hair" value="C">
                   <label for="hairc">Tier 3: $500 - $750</label><br>
-                  <input type="radio" id="haird" name="hair" value="haird">
+                  <input type="radio" id="haird" name="hair" value="D">
                   <label for="haird">Tier 4: $250 - $500</label><br>
-                  <input type="radio" id="haire" name="hair" value="haire">
+                  <input type="radio" id="haire" name="hair" value="E">
                   <label for="haire">Tier 5: < $250</label><br>
               </div>
               <div class="grid_item">
                   <p></p>
                   <h3>Save The Date Tier<br /> (per guest):</h3>
-                  <input type="radio" id="stda" name="std" value="stda">
+                  <input type="radio" id="stda" name="std" value="A">
                   <label for="stda">Tier 1: $10 +</label><br>
-                  <input type="radio" id="stdb" name="std" value="stdb">
+                  <input type="radio" id="stdb" name="std" value="B">
                   <label for="stdb">Tier 2: $7.50 - $10</label><br>
-                  <input type="radio" id="stdc" name="std" value="stdc">
+                  <input type="radio" id="stdc" name="std" value="C">
                   <label for="stdc">Tier 3: $5.00 - $7.50</label><br>
-                  <input type="radio" id="stdd" name="std" value="stdd">
+                  <input type="radio" id="stdd" name="std" value="D">
                   <label for="stdd">Tier 4: $2.50 - $5.00</label><br>
-                  <input type="radio" id="stde" name="std" value="stde">
+                  <input type="radio" id="stde" name="std" value="E">
                   <label for="stde">Tier 5: < $2.50</label><br>
               </div>
               <div class="grid_item">
                   <p></p>
                   <h3>Cake Tier:</h3>
-                  <input type="radio" id="cakea" name="cake" value="cakea">
+                  <input type="radio" id="cakea" name="cake" value="A">
                   <label for="cakea">Tier 1: $1,000 +</label><br>
-                  <input type="radio" id="cakeb" name="cake" value="cakeb">
+                  <input type="radio" id="cakeb" name="cake" value="B">
                   <label for="cakeb">Tier 2: $750 - $1,000</label><br>
-                  <input type="radio" id="cakec" name="cake" value="cakec">
+                  <input type="radio" id="cakec" name="cake" value="C">
                   <label for="cakec">Tier 3: $500 - $750</label><br>
-                  <input type="radio" id="caked" name="cake" value="caked">
+                  <input type="radio" id="caked" name="cake" value="D">
                   <label for="caked">Tier 4: $250 - $500</label><br>
-                  <input type="radio" id="cakee" name="cake" value="cakee">
+                  <input type="radio" id="cakee" name="cake" value="E">
                   <label for="cakee">Tier 5: < $250</label><br>
               </div>
           </div>
-      <input type="submit">
-      <br></br>
-      <p></p>
+          <input type="submit" value="Calculate Costs">
+          </br>
+          <p></p>
       </form>
+      <div id="cost_content_container", align="left">
+          <h1 id="wedding_cost_header"></h1>
+      </div>
   </div>
 
   <!-- Footer -->
@@ -258,13 +262,9 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
+// Calculate the wedding cost range
 function weddingCalculator() {
-    var venue = document.getElementById("venue").value
-    var last_name = document.getElementById("lname").value
-    alert("Welcome " + last_name + "'s! Glad to hear your wedding is at " + venue);
-
-    var welcome_banner = document.getElementByID("welcome_banner");
-    welcome_banner.innerHTML = "Hello " + last_name + "'s";
+    alert("it worked!");
 }
 </script>
 
